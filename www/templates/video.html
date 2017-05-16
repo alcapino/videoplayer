@@ -1,0 +1,35 @@
+<ion-view title="Video" hide-nav-bar="true">
+  <ion-content ng-controller="VideoCtrl">
+    <img ng-src="{{vid.url}}"/>
+    <div class="padding">
+        <h3>{{vid.title}}</h3>
+        1 Season, 23 Episode | Tag<br/>
+    </div>
+    <div class="button-bar">
+        <a class="button button-positive" >First</a>
+        <a class="button button-positive" >Second</a>
+    </div>
+    <div>
+        <b>Release:</b>&emsp;2010<br/>
+        <b>Subtitles:</b>&emsp;English<br/>
+        <b>Cast:</b>&emsp;&emsp;PV<br/>
+    </div><br/>
+    <p>
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+    </p>
+    <div>
+        <button class="button button-small">Small Button</button>
+        <button class="button button-small">Small Button</button>
+    </div><br/>
+
+    
+        <ion-slide-box slidesPerView="2">
+          <ion-slide ng-repeat="movie in movies" href="#/videopage/{{movie.id}}" >
+            <a href="#/videopage/{{movie.id}}" ><img ng-src="{{movie.url}}" ><br />
+            {{movie.title}}</a>
+          </ion-slide>
+        </ion-slide-box>
+    
+
+  </ion-content>
+</ion-view>

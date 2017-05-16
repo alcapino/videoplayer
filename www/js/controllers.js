@@ -19,7 +19,21 @@ angular.module('starter.controllers', [])
 
 }])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope,$state,Videos) {
+  $scope.featured = Videos.all();
+  $scope.locals = Videos.all();
+  $scope.gotoVideo = function(param){
+    alert(param);
+    $state.go('videopage',{"vid":param});
+  };
+})
+
+.controller('VideoCtrl', function($scope,$stateParams,Videos){
+  console.log(Videos.all());
+  $scope.movies = Videos.all();
+  $scope.vid = Videos.get($stateParams.vid);
+  console.log("v: "+Videos.get($stateParams.vid).url);
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called

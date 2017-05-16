@@ -47,4 +47,33 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+})
+
+.factory("Videos", function () {
+  var videos = [
+    {"title":"movie1","url":"img/poster001.jpg","id":"1"},
+    {"title":"movie2","url":"img/poster002.jpg","id":"2"},
+    {"title":"movie3","url":"img/poster003.jpg","id":"3"},
+    {"title":"movie4","url":"img/poster004.jpg","id":"4"},
+    {"title":"movie5","url":"img/poster005.jpg","id":"5"},
+    {"title":"movie6","url":"img/poster006.jpg","id":"6"},
+  ];
+  return {
+    all: function() {
+      return videos;
+    },
+    get: function(vid) {
+      //console.log(vdata);
+      for (var i = 0; i < videos.length; i++) {
+        if (videos[i].id === vid) {
+          return videos[i];
+        }
+      }
+      return null;
+    }
+  };
+})
+
+
+
+;
