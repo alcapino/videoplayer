@@ -2,3 +2,19 @@
 img{
     width: 100%;
 }
+
+.float-button {
+    /*background-color:heading-color;*/
+    opacity: 0.9;
+    /*color: white;*/
+    border-radius: 50%;
+    /*border-radius:15% 0 0 0;*/
+    /*width: 30px;
+    padding: 25px;
+    font-size: 30px;*/
+    position: fixed;
+    /*bottom: 10%; Adjust height */
+    right: 5%; /* Adjust position */
+    top: 310px;
+    z-index: 1000;
+}

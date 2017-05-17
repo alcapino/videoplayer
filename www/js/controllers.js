@@ -29,10 +29,18 @@ angular.module('starter.controllers', [])
 })
 
 .controller('VideoCtrl', function($scope,$stateParams,Videos){
-  console.log(Videos.all());
+  //console.log(Videos.all());
   $scope.movies = Videos.all();
   $scope.vid = Videos.get($stateParams.vid);
-  console.log("v: "+Videos.get($stateParams.vid).url);
+  //console.log("v: "+Videos.get($stateParams.vid).url);
+})
+
+.controller('PlayCtrl', function($scope,$stateParams){
+  //console.log(Videos.all());
+  //$scope.movies = Videos.all();
+  //$scope.vid = Videos.get($stateParams.vid);
+  //console.log("v: "+Videos.get($stateParams.vid).url);
+  //screen.lockOrientation('landscape'); 
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {

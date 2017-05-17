@@ -38,6 +38,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: "/videopage/:vid",
     templateUrl: 'templates/video.html'
   })
+  .state('play', {
+    url: "/play/:vid",
+    templateUrl: 'templates/playvideo.html'
+  })
   .state('page2', {
     url: "/page2",
     templateUrl: 'templates/tab-dash.html'
